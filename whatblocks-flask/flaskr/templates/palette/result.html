@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %}palette extraction{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="box">
+    <div class="grid flex-item">
+        {% for seg in extracted %}
+            {% for mcblock in seg %}
+            <div class="mcblock" id="{{ mcblock[0] }}">
+                <img src="{{ url_for('palette.get_mc_texture', name=mcblock[0]) }}" alt="{{ mcblock[0] }}"
+                    height="128"
+                    width="128">
+            </div>
+            {% endfor %}
+        {% endfor %}
+
+    </div>
+    <div class="box">
+        <div id="uploaded flex-item">
+            <img src="{{ url_for('palette.get_uploaded', filename=uploaded_name) }}"
+                height="400"
+                width=auto>
+        </div>
+        <div id="segmented flex-item">
+            <img src="{{ url_for('palette.get_seg', filename=seg_filename) }}"
+                height="400"
+                width=auto>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,1 @@
+1. activate venv with venv/Scripts/activate

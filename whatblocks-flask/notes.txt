@@ -1,0 +1,31 @@
+
+features:
+	upload multiple images and view them all on the extract page
+	segmentation method
+	segment editor(on segment contour img)
+	change k on extract page
+	which blocks to pick from
+		only full blocks?
+		only survival blocks?
+		only creative blocks?
+		choose individual
+	detectron2 
+
+improvements:
+	bootstrap
+	secure uploading location
+	
+
+
+configuration
+    	Create your application in a function and register blueprints on it. That way you can create multiple instances of your application with different configurations attached which makes unit testing a lot easier. You can use this to pass in configuration as needed.
+
+    Do not write code that needs the configuration at import time. If you limit yourself to request-only accesses to the configuration you can reconfigure the object later on as needed.
+
+flask.g
+	
+
+learned:
+	semantic segmentation
+	flask app
+	file upload security
